@@ -62,7 +62,8 @@ class funcutils:
             match ta:
                 case 'poly':
                     p=(a:=list(a)).pop(__pos)
-                    for i in range(len(a)):a[i]=list(a[i]);
+                    a=list(map(list,a))
+#                     for i in range(len(a)):a[i]=list(a[i]);
                     for i in a:i[0]=alg.mul('-1',i[0],pr=__pr);
                     if p[1]==0:print(p[1],"is zero!");return None;
                     return apolyn(alg.pwr(alg.div('1',p[0],__pr),(pw:=alg.div('1',p[1],__pr)),__pr),pw,*a,pr=__pr);
