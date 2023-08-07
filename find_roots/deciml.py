@@ -329,83 +329,83 @@ class algbra:
 class galgbra:
 
     @staticmethod
-    def add(*__a:list[Decimal]|tuple[Decimal,...])->tuple[Decimal,...]:
-        try:return tuple(map(lambda x:algbra.add(*x),zip(*__a)));
+    def add(*__a:list[Decimal]|tuple[Decimal,...],pr=getpr())->tuple[Decimal,...]:
+        try:return tuple(map(lambda x:algbra.add(*x,pr=pr),zip(*__a)));
         except Exception as e:print("Invalid command: galgra.add\n",e);
     
     @staticmethod
-    def sub(*__a:list[Decimal]|tuple[Decimal,...])->tuple[Decimal,...]:
-        try:return tuple(map(lambda x:algbra.sub(*x),zip(*__a)));
+    def sub(*__a:list[Decimal]|tuple[Decimal,...],pr=getpr())->tuple[Decimal,...]:
+        try:return tuple(map(lambda x:algbra.sub(*x,pr=pr),zip(*__a)));
         except Exception as e:print("Invalid command: galgra.sub\n",e);
     
     @staticmethod
-    def mul(*__a:list[Decimal]|tuple[Decimal,...])->tuple[Decimal,...]:
-        try:return tuple(map(lambda x:algbra.mul(*x),zip(*__a)));
+    def mul(*__a:list[Decimal]|tuple[Decimal,...],pr=getpr())->tuple[Decimal,...]:
+        try:return tuple(map(lambda x:algbra.mul(*x,pr=pr),zip(*__a)));
         except Exception as e:print("Invalid command: galgra.mul\n",e);
     
     @staticmethod
-    def div(__a:list[Decimal]|tuple[Decimal,...],__b:list[Decimal]|tuple[Decimal,...])->tuple[Decimal,...]:
-        try:return tuple(map(lambda x:algbra.div(*x),zip(__a,__b)));
+    def div(__a:list[Decimal]|tuple[Decimal,...],__b:list[Decimal]|tuple[Decimal,...],__pr=getpr())->tuple[Decimal,...]:
+        try:return tuple(map(lambda x:algbra.div(*x,__pr),zip(__a,__b)));
         except Exception as e:print("Invalid command: galgra.div\n",e);
     
     @staticmethod
-    def pwr(__a:list[Decimal]|tuple[Decimal,...],__b:list[Decimal]|tuple[Decimal,...])->tuple[Decimal,...]:
-        try:return tuple(map(lambda x:algbra.pwr(*x),zip(__a,__b)));
+    def pwr(__a:list[Decimal]|tuple[Decimal,...],__b:list[Decimal]|tuple[Decimal,...],__pr=getpr())->tuple[Decimal,...]:
+        try:return tuple(map(lambda x:algbra.pwr(*x,__pr),zip(__a,__b)));
         except Exception as e:print("Invalid command: galgra.pwr\n",e);
     
     @staticmethod
-    def log(__a:list[Decimal]|tuple[Decimal,...],__b:list[Decimal]|tuple[Decimal,...])->tuple[Decimal,...]:
-        try:return tuple(map(lambda x:algbra.log(*x),zip(__a,__b)));
+    def log(__a:list[Decimal]|tuple[Decimal,...],__b:list[Decimal]|tuple[Decimal,...],__pr=getpr())->tuple[Decimal,...]:
+        try:return tuple(map(lambda x:algbra.log(*x,__pr),zip(__a,__b)));
         except Exception as e:print("Invalid command: galgra.log\n",e);
     
     @staticmethod
-    def addsg(__a:Decimal,__b:list[Decimal]|tuple[Decimal,...])->tuple[Decimal,...]:
-        try:__a=str(__a);return tuple(map(lambda x:algbra.add(__a,x),__b));
+    def addsg(__a:Decimal,__b:list[Decimal]|tuple[Decimal,...],__pr=getpr())->tuple[Decimal,...]:
+        try:__a=str(__a);return tuple(map(lambda x:algbra.add(__a,x,pr=__pr),__b));
         except Exception as e:print("Invalid command: galgra.addsg\n",e);
     
     @staticmethod
-    def subgs(__a:list[Decimal]|tuple[Decimal,...],__b:Decimal)->tuple[Decimal,...]:
-        try:__b=str(__b);return tuple(map(lambda x:algbra.sub(x,__b),__a));
+    def subgs(__a:list[Decimal]|tuple[Decimal,...],__b:Decimal,__pr=getpr())->tuple[Decimal,...]:
+        try:__b=str(__b);return tuple(map(lambda x:algbra.sub(x,__b,pr=__pr),__a));
         except Exception as e:print("Invalid command: galgra.subgs\n",e);
     
     @staticmethod
-    def subsg(__a:Decimal,__b:list[Decimal]|tuple[Decimal,...])->tuple[Decimal,...]:
-        try:__a=str(__a);return tuple(map(lambda x:algbra.sub(__a,x),__b));
+    def subsg(__a:Decimal,__b:list[Decimal]|tuple[Decimal,...],__pr=getpr())->tuple[Decimal,...]:
+        try:__a=str(__a);return tuple(map(lambda x:algbra.sub(__a,x,pr=__pr),__b));
         except Exception as e:print("Invalid command: galgra.subsg\n",e);
 
     @staticmethod
-    def mulsg(__a:Decimal,__b:list[Decimal]|tuple[Decimal,...])->tuple[Decimal,...]:
-        try:__a=str(__a);return tuple(map(lambda x:algbra.mul(__a,x),__b));
+    def mulsg(__a:Decimal,__b:list[Decimal]|tuple[Decimal,...],__pr=getpr())->tuple[Decimal,...]:
+        try:__a=str(__a);return tuple(map(lambda x:algbra.mul(__a,x,pr=__pr),__b));
         except Exception as e:print("Invalid command: galgra.mulsg\n",e);
 
     @staticmethod
-    def divgs(__a:list[Decimal]|tuple[Decimal,...],__b:Decimal)->tuple[Decimal,...]:
-        try:__b=str(__b);return tuple(map(lambda x:algbra.div(x,__b),__a));
+    def divgs(__a:list[Decimal]|tuple[Decimal,...],__b:Decimal,__pr=getpr())->tuple[Decimal,...]:
+        try:__b=str(__b);return tuple(map(lambda x:algbra.div(x,__b,__pr),__a));
         except Exception as e:print("Invalid command: galgra.divgs\n",e);
     
     @staticmethod
-    def divsg(__a:Decimal,__b:list[Decimal]|tuple[Decimal,...])->tuple[Decimal,...]:
-        try:__a=str(__a);return tuple(map(lambda x:algbra.div(__a,x),__b));
+    def divsg(__a:Decimal,__b:list[Decimal]|tuple[Decimal,...],__pr=getpr())->tuple[Decimal,...]:
+        try:__a=str(__a);return tuple(map(lambda x:algbra.div(__a,x,__pr),__b));
         except Exception as e:print("Invalid command: galgra.divsg\n",e);
 
     @staticmethod
-    def pwrgs(__a:list[Decimal]|tuple[Decimal,...],__b:Decimal)->tuple[Decimal,...]:
-        try:__b=str(__b);return tuple(map(lambda x:algbra.pwr(x,__b),__a));
+    def pwrgs(__a:list[Decimal]|tuple[Decimal,...],__b:Decimal,__pr=getpr())->tuple[Decimal,...]:
+        try:__b=str(__b);return tuple(map(lambda x:algbra.pwr(x,__b,__pr),__a));
         except Exception as e:print("Invalid command: galgra.pwrgs\n",e);
     
     @staticmethod
-    def pwrsg(__a:Decimal,__b:list[Decimal]|tuple[Decimal,...])->tuple[Decimal,...]:
-        try:__a=str(__a);return tuple(map(lambda x:algbra.pwr(__a,x),__b));
+    def pwrsg(__a:Decimal,__b:list[Decimal]|tuple[Decimal,...],__pr=getpr())->tuple[Decimal,...]:
+        try:__a=str(__a);return tuple(map(lambda x:algbra.pwr(__a,x,__pr),__b));
         except Exception as e:print("Invalid command: galgra.pwrsg\n",e);
     
     @staticmethod
-    def loggs(__a:list[Decimal]|tuple[Decimal,...],__b:Decimal)->tuple[Decimal,...]:
-        try:__b=str(__b);return tuple(map(lambda x:algbra.log(x,__b),__a));
+    def loggs(__a:list[Decimal]|tuple[Decimal,...],__b:Decimal,__pr=getpr())->tuple[Decimal,...]:
+        try:__b=str(__b);return tuple(map(lambda x:algbra.log(x,__b,__pr),__a));
         except Exception as e:print("Invalid command: galgra.loggs\n",e);
     
     @staticmethod
-    def logsg(__a:Decimal,__b:list[Decimal]|tuple[Decimal,...])->tuple[Decimal,...]:
-        try:__a=str(__a);return tuple(map(lambda x:algbra.log(__a,x),__b));
+    def logsg(__a:Decimal,__b:list[Decimal]|tuple[Decimal,...],__pr=getpr())->tuple[Decimal,...]:
+        try:__a=str(__a);return tuple(map(lambda x:algbra.log(__a,x,__pr),__b));
         except Exception as e:print("Invalid command: galgra.logsg\n",e);
 
 
@@ -603,3 +603,4 @@ class stat:
 # a=stat.mode(['1','2','3','4','5','3','2','1','2','3'])
 # print(a)
 # print(deciml('000.00000000000000000045'))
+
