@@ -43,6 +43,8 @@ Decimal('-0.1044283674669162')
 
 
 Solve equations using various methods  
+
+from solnfn import *
   
 1. Root rearrange  
 rootrearr(function, list of points, max x, precision)  
