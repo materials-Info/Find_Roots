@@ -1,7 +1,7 @@
 # Find_Roots
 Different methods to find roots of given equation.
 
-Creeate object for different equations.
+Creeate object for different equations (function).
 
 $ cd locations/to/Find_Roots  
 $ python  
@@ -40,3 +40,15 @@ a.f(1.5)
 Decimal('0.032249937011841774')  
 a.df(1.5)  
 Decimal('-0.1044283674669162')  
+
+
+Solve equations using various methods  
+  
+1. Root rearrange  
+rootrearr(function, list of points, max x, precision)  
+2. linear interpolation  
+lininter(function, list of points, max x, precision)  
+3. Bisection  
+bchop(function, list of points, max x, precision)  
+4. Newton-Raphson iteration  
+nriter(function, list of points, max x, precision)    
