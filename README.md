@@ -21,7 +21,7 @@ Decimal('8.00')
 a.df(2)  
 Decimal('12.000')  
   
-2, a1*(x^n1)+a2*(x^n2)+...+a_N*(x^n_N)  
+2. a1*(x^n1)+a2*(x^n2)+...+a_N*(x^n_N)  
   
 poly((a1,n1),(a2,n2),...,(a_N,n_N),pr=precision)  
 eg:  
