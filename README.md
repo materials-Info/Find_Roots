@@ -6,7 +6,7 @@ Creeate object for different equations.
 $ cd locations/to/Find_Roots  
 $ python  
 from find_roots.functions import *  
-
+  
 1. a*(x^n); a and n are constants    
   
 axn(a,n,precision)  
@@ -20,5 +20,5 @@ Decimal('8.00')
 >   
 a.df(2)  
 Decimal('12.000')  
-
+  
 2, a1*(x^n1)+a2*(x^n2)+...+a_N*(x^n_N)
