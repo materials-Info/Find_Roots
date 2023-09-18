@@ -21,3 +21,4 @@ Decimal('8.00')
 a.df(2)  
 Decimal('12.000')  
 
+2, a1*(x^n1)+a2*(x^n2)+...+a_N*(x^n_N)
