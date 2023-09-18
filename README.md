@@ -30,3 +30,13 @@ a.f(1.5)
 Decimal('7.8750')  
 a.df(1.5)  
 Decimal('12.7500')  
+
+3. a*(a1*(x^n1)+a2*(x^n2)+...+a_N*(x^n_N))^n
+  
+apolyn(a,n,(a1,n1),(a2,n2),...,(a_N,n_N),pr=precision)  
+eg:  
+a=apolyn(2,-2,(2,2),(1,3),pr=16)  
+a.f(1.5)  
+Decimal('0.032249937011841774')  
+a.df(1.5)  
+Decimal('-0.1044283674669162')  
