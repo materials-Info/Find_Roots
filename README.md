@@ -12,7 +12,11 @@ a*(x^n); a and n are constants
 
 eg: 
 >a=axn(1,3,12)
+
 >> a.f(2)
+
 Decimal('8.00')
+
 >> a.df(2)
+
 Decimal('12.000')
