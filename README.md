@@ -3,11 +3,9 @@ Different methods to find roots of given equation.
 
 Creeate object for different equations.
 
-$ cd locations/to/Find_Roots
-
-$ python
-
-from find_roots.functions import *
+$ cd locations/to/Find_Roots  
+$ python  
+from find_roots.functions import *  
 
 a*(x^n); a and n are constants
 
