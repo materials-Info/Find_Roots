@@ -8,6 +8,7 @@ $ python
 from find_roots.functions import *  
 
 1. a*(x^n); a and n are constants    
+
 axn(a,n,precision)  
 eg:  
 a=axn(1,3,12)  
